@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Once a Week Ambient</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Once a Week Ambient</h1>
+    <p class="tagline">One piece, every week.</p>
+  </header>
+
+  <main>
+    <ol class="tracklist" id="tracklist">
+
+      <li class="track" data-src="audio/01-drift.mp3" data-title="Drift" data-duration="8:12">
+        <span class="track-num">01</span>
+        <div class="track-meta">
+          <span class="track-title">Drift</span>
+        </div>
+        <span class="track-duration">8:12</span>
+        <button class="track-btn" aria-label="Play Drift">
+          <svg class="icon-play" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+      </li>
+
+      <li class="track" data-src="audio/02-morning-fog.mp3" data-title="Morning Fog" data-duration="11:34">
+        <span class="track-num">02</span>
+        <div class="track-meta">
+          <span class="track-title">Morning Fog</span>
+        </div>
+        <span class="track-duration">11:34</span>
+        <button class="track-btn" aria-label="Play Morning Fog">
+          <svg class="icon-play" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+      </li>
+
+      <li class="track" data-src="audio/03-still-water.mp3" data-title="Still Water" data-duration="9:47">
+        <span class="track-num">03</span>
+        <div class="track-meta">
+          <span class="track-title">Still Water</span>
+        </div>
+        <span class="track-duration">9:47</span>
+        <button class="track-btn" aria-label="Play Still Water">
+          <svg class="icon-play" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+      </li>
+
+      <li class="track" data-src="audio/04-before-dawn.mp3" data-title="Before Dawn" data-duration="13:05">
+        <span class="track-num">04</span>
+        <div class="track-meta">
+          <span class="track-title">Before Dawn</span>
+        </div>
+        <span class="track-duration">13:05</span>
+        <button class="track-btn" aria-label="Play Before Dawn">
+          <svg class="icon-play" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+      </li>
+
+      <li class="track" data-src="audio/05-clearing.mp3" data-title="Clearing" data-duration="7:58">
+        <span class="track-num">05</span>
+        <div class="track-meta">
+          <span class="track-title">Clearing</span>
+        </div>
+        <span class="track-duration">7:58</span>
+        <button class="track-btn" aria-label="Play Clearing">
+          <svg class="icon-play" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+      </li>
+
+      <li class="track" data-src="audio/06-late-hour.mp3" data-title="Late Hour" data-duration="10:22">
+        <span class="track-num">06</span>
+        <div class="track-meta">
+          <span class="track-title">Late Hour</span>
+        </div>
+        <span class="track-duration">10:22</span>
+        <button class="track-btn" aria-label="Play Late Hour">
+          <svg class="icon-play" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+      </li>
+
+    </ol>
+  </main>
+
+  <footer class="about">
+    <p>Recorded slowly. Released weekly.</p>
+  </footer>
+
+  <!-- Fixed player bar -->
+  <div class="player" id="player" aria-hidden="true">
+    <div class="player-info">
+      <span class="player-now-label">Now playing</span>
+      <span class="player-title" id="player-title">—</span>
+    </div>
+
+    <div class="player-center">
+      <div class="player-controls">
+        <button class="ctrl-btn" id="btn-prev" aria-label="Previous track">
+          <svg viewBox="0 0 24 24"><polygon points="19,20 9,12 19,4"/><line x1="5" y1="4" x2="5" y2="20"/></svg>
+        </button>
+        <button class="ctrl-btn ctrl-play" id="btn-play" aria-label="Play / Pause">
+          <svg class="icon-play" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <button class="ctrl-btn" id="btn-next" aria-label="Next track">
+          <svg viewBox="0 0 24 24"><polygon points="5,4 15,12 5,20"/><line x1="19" y1="4" x2="19" y2="20"/></svg>
+        </button>
+      </div>
+
+      <div class="player-progress">
+        <span class="time" id="time-current">0:00</span>
+        <input type="range" id="progress" value="0" min="0" max="100" step="0.1" aria-label="Seek">
+        <span class="time" id="time-total">0:00</span>
+      </div>
+    </div>
+
+    <div class="player-volume">
+      <svg viewBox="0 0 24 24" class="vol-icon"><polygon points="11,5 6,9 2,9 2,15 6,15 11,19"/><path d="M15.54,8.46a5,5,0,0,1,0,7.07"/><path d="M19.07,4.93a10,10,0,0,1,0,14.14"/></svg>
+      <input type="range" id="volume" value="85" min="0" max="100" aria-label="Volume">
+    </div>
+  </div>
+
+  <audio id="audio"></audio>
+  <script src="player.js"></script>
+</body>
+</html>
