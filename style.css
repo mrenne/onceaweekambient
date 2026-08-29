@@ -100,17 +100,6 @@ main {
   letter-spacing: 0.01em;
 }
 
-.track-week {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.track.is-playing .track-week {
-  color: var(--accent);
-}
-
 .track-duration {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -160,15 +149,33 @@ main {
   color: var(--accent);
 }
 
-/* ── Coming soon ── */
+/* ── Week sections ── */
+.week + .week {
+  margin-top: 2.5rem;
+}
+
+.week-header {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.week-upcoming .week-header {
+  opacity: 0.6;
+}
+
 .coming-soon {
-  text-align: center;
-  padding: 2.5rem 0 0;
   color: var(--text-muted);
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.05rem;
   letter-spacing: 0.03em;
+  padding: 0.5rem 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--border);
 }
 
 /* ── About footer ── */
