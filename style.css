@@ -187,6 +187,18 @@ main {
   letter-spacing: 0.06em;
 }
 
+.about a {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.about a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 .learn-more {
   margin-top: 1rem;
 }
