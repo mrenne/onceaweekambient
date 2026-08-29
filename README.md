@@ -14,8 +14,6 @@ Once a Week Ambient is a weekly practice of writing and releasing a single ambie
 
 The constraint is simple: one week, one piece. No perfectionism, no long production cycles — just a steady rhythm of making and sharing.
 
-## Site
-
 ## License
 
 All music released on this site is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You're free to share and adapt it, including commercially, as long as you give appropriate credit.
