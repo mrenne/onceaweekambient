@@ -88,9 +88,27 @@ main {
   text-align: right;
 }
 
+.track-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow: hidden;
+}
+
 .track-title {
   font-size: 1rem;
   letter-spacing: 0.01em;
+}
+
+.track-week {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.track.is-playing .track-week {
+  color: var(--accent);
 }
 
 .track-duration {
@@ -142,6 +160,17 @@ main {
   color: var(--accent);
 }
 
+/* ── Coming soon ── */
+.coming-soon {
+  text-align: center;
+  padding: 2.5rem 0 0;
+  color: var(--text-muted);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+}
+
 /* ── About footer ── */
 .about {
   text-align: center;
@@ -149,6 +178,21 @@ main {
   color: var(--text-muted);
   font-size: 0.85rem;
   letter-spacing: 0.06em;
+}
+
+.learn-more {
+  margin-top: 1rem;
+}
+
+.learn-more a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.learn-more a:hover {
+  border-bottom-color: var(--accent);
 }
 
 /* ── Player bar ── */
