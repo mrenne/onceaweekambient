@@ -2,7 +2,7 @@
 
 A minimalist, self-hosted listening site for an ongoing ambient music project. One new piece, every week.
 
-**[Listen →](https://mrenne.github.io/onceaweekambient/)**
+**[Listen →](https://oawambient.org)**
 
 ## About
 
